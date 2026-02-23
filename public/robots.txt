@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evenings.chase-wellness.com/sitemap.xml
+Host: https://evenings.chase-wellness.com
