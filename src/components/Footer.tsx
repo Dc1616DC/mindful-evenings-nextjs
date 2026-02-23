@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
@@ -95,23 +96,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Newsletter */}
           <div>
             <h4 style={{ color: "white", fontWeight: 600, marginBottom: "1rem", fontSize: "0.875rem" }}>
-              Company
+              Weekly Insights
             </h4>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {[
-                { href: "/about", label: "About" },
-                { href: "/contact", label: "Contact" },
-                { href: "/privacy", label: "Privacy" },
-                { href: "/terms", label: "Terms" },
-              ].map((link) => (
-                <li key={link.href} style={{ marginBottom: "0.5rem" }}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
-                </li>
-              ))}
-            </ul>
+            <p style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "1rem", lineHeight: 1.5 }}>
+              Get practical tools for understanding your evening eating patterns.
+            </p>
+            <NewsletterForm compact />
           </div>
         </div>
 

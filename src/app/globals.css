@@ -271,3 +271,33 @@ body {
   color: #94a3b8;
   line-height: 1.7;
 }
+
+/* Newsletter form animations */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.4); }
+  100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.2); }
+}
+
+.newsletter-form {
+  transition: all 0.3s ease;
+}
+
+.newsletter-success {
+  animation: glow 2s ease-in-out;
+  transform: translateY(0);
+}

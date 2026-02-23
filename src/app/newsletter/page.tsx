@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/content";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Newsletter | Mindful Evenings",
@@ -18,11 +19,8 @@ export default function NewsletterPage() {
         <p style={{ color: "#94a3b8", maxWidth: 520, margin: "0 auto 2rem", lineHeight: 1.7 }}>
           Weekly insights on emotional eating, evening cravings, and building a better relationship with food — delivered to your inbox by Registered Dietitian Dan Chase.
         </p>
-        <form style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap", maxWidth: 480, margin: "0 auto 1rem" }}>
-          <input type="email" placeholder="Enter your email" style={{ flex: 1, minWidth: 220, padding: "0.75rem 1.25rem", borderRadius: 9999, border: "1px solid rgba(139,92,246,0.3)", background: "rgba(139,92,246,0.08)", color: "white", outline: "none", fontSize: "0.95rem" }} />
-          <button type="submit" className="btn-primary">Subscribe</button>
-        </form>
-        <p style={{ color: "#475569", fontSize: "0.8rem" }}>No spam, ever. Unsubscribe anytime.</p>
+        <NewsletterForm />
+        <p style={{ color: "#64748b", fontSize: "0.8rem", textAlign: "center", marginTop: "1rem" }}>Join 28+ readers getting weekly insights</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", maxWidth: 640, margin: "3rem auto 0" }}>
           {[
             { icon: "📊", title: "Evidence-Based", desc: "Grounded in nutrition science and behavioral psychology" },

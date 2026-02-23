@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPost, getAllPosts, SITE_URL } from "@/lib/content";
 import MDXRenderer from "@/components/MDXRenderer";
+import NewsletterForm from "@/components/NewsletterForm";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -302,16 +303,8 @@ export default async function BlogPostPage({ params }: Props) {
           <p style={{ color: "#94a3b8", maxWidth: 440, margin: "0 auto 1.75rem", lineHeight: 1.7, fontSize: "0.9rem" }}>
             Weekly insights on emotional eating, evening cravings, and building a better relationship with food.
           </p>
-          <form style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap", maxWidth: 440, margin: "0 auto" }}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              style={{ flex: 1, minWidth: 200, padding: "0.7rem 1.1rem", borderRadius: 9999, border: "1px solid rgba(139,92,246,0.3)", background: "rgba(139,92,246,0.08)", color: "white", outline: "none", fontSize: "0.9rem" }}
-            />
-            <button type="submit" className="btn-primary" style={{ padding: "0.7rem 1.5rem", fontSize: "0.9rem" }}>
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
+          <p style={{ color: "#64748b", fontSize: "0.8rem", marginTop: "1rem" }}>Join 28+ readers • No spam, ever</p>
         </div>
       </section>
 
