@@ -63,6 +63,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${SITE_URL}/resources/kitchen-closing-contract`,
+      lastModified: new Date("2026-02-23"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/glp1`,
+      lastModified: new Date("2026-02-23"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/programs`,
+      lastModified: new Date("2026-02-23"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/tools/hunger-check`,
+      lastModified: new Date("2026-02-23"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/newsletter`,
+      lastModified: new Date("2026-02-23"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: `${SITE_URL}/privacy`,
       lastModified: new Date("2026-01-01"),
       changeFrequency: "yearly",
