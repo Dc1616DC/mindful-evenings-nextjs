@@ -24,73 +24,52 @@ export default function ResourcesPage() {
       {/* Free Downloads */}
       <section style={{ padding: "3rem 1.5rem", background: "#0a0a1f" }}>
         <div className="section-container">
-          <p style={{ color: "#8b5cf6", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.75rem" }}>FREE DOWNLOADS</p>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "white", marginBottom: "1.5rem" }}>Start Here</h2>
+          <p style={{ color: "#8b5cf6", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.75rem" }}>START HERE</p>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "white", marginBottom: "1.5rem" }}>Essential Reads</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem", marginBottom: "3rem" }}>
             
             {/* Evening Eating Starter Guide */}
-            <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem" }}>
-              <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>📖</div>
-              <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>The Evening Eating Starter Guide</h3>
-              <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
-                A free PDF guide to understanding your evening eating patterns and building awareness. Includes the HALT framework, journal prompts, and practical strategies.
-              </p>
-              <div style={{ 
-                padding: "0.75rem 1.5rem", 
-                background: "rgba(139, 92, 246, 0.15)", 
-                borderRadius: "0.75rem", 
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                color: "#a78bfa",
-                fontSize: "0.85rem"
-              }}>
-                📧 Enter your email below to get the free guide
+            <Link href="/learn/evening-eating-science" style={{ textDecoration: "none" }}>
+              <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem", cursor: "pointer", height: "100%" }}>
+                <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>📖</div>
+                <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>The Science of Evening Eating</h3>
+                <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
+                  Why your body and brain behave differently at night — circadian rhythms, cortisol, and appetite hormones explained. Start here to understand what&apos;s actually happening.
+                </p>
+                <p style={{ color: "#8b5cf6", fontSize: "0.85rem", fontWeight: 600 }}>Read the guide →</p>
               </div>
-            </div>
+            </Link>
 
-            {/* Evening Grounding Meditation */}
-            <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem" }}>
-              <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🧘</div>
-              <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>Evening Grounding Meditation</h3>
-              <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
-                A 5-minute audio meditation for those moments when you need to pause and breathe. Designed specifically for evening craving moments.
-              </p>
-              <div style={{ 
-                padding: "0.75rem 1.5rem", 
-                background: "rgba(139, 92, 246, 0.15)", 
-                borderRadius: "0.75rem", 
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                color: "#a78bfa",
-                fontSize: "0.85rem"
-              }}>
-                🎧 Coming soon
+            {/* Evening Check-In */}
+            <Link href="/check-in" style={{ textDecoration: "none" }}>
+              <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem", cursor: "pointer", height: "100%" }}>
+                <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>✨</div>
+                <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>Evening Check-In Tool</h3>
+                <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
+                  A free 2-minute guided check-in for those craving moments. Pause, understand what you&apos;re feeling, and respond with intention instead of autopilot.
+                </p>
+                <p style={{ color: "#8b5cf6", fontSize: "0.85rem", fontWeight: 600 }}>Start a check-in →</p>
               </div>
-            </div>
+            </Link>
 
-            {/* Values Discovery Workbook */}
-            <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem" }}>
-              <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>📝</div>
-              <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>Values Discovery Workbook</h3>
-              <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
-                An ACT-based workbook to help you identify your core values and use them as a compass when cravings hit. Understand what matters to you beyond the food.
-              </p>
-              <div style={{ 
-                padding: "0.75rem 1.5rem", 
-                background: "rgba(139, 92, 246, 0.15)", 
-                borderRadius: "0.75rem", 
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                color: "#a78bfa",
-                fontSize: "0.85rem"
-              }}>
-                📧 Enter your email below to get the workbook
+            {/* Values & Emotional Eating */}
+            <Link href="/learn/what-is-emotional-eating" style={{ textDecoration: "none" }}>
+              <div className="card" style={{ textAlign: "center", padding: "2rem 1.5rem", cursor: "pointer", height: "100%" }}>
+                <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🧠</div>
+                <h3 style={{ color: "white", fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.5rem" }}>Understanding Emotional Eating</h3>
+                <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>
+                  What emotional eating actually is (and isn&apos;t), why willpower doesn&apos;t work, and how an ACT-based values approach changes everything.
+                </p>
+                <p style={{ color: "#8b5cf6", fontSize: "0.85rem", fontWeight: 600 }}>Learn more →</p>
               </div>
-            </div>
+            </Link>
           </div>
 
-          {/* Email signup for downloads */}
+          {/* Email signup */}
           <div className="card" style={{ maxWidth: 520, margin: "0 auto", textAlign: "center", padding: "2rem" }}>
-            <h3 style={{ color: "white", fontWeight: 700, fontSize: "1rem", marginBottom: "0.5rem" }}>Get free resources delivered to your inbox</h3>
+            <h3 style={{ color: "white", fontWeight: 700, fontSize: "1rem", marginBottom: "0.5rem" }}>Get weekly evening eating insights</h3>
             <p style={{ color: "#94a3b8", fontSize: "0.85rem", marginBottom: "1.25rem" }}>
-              Subscribe and we&apos;ll send you the Starter Guide, workbook, and weekly insights.
+              Short, practical insights on evening eating — psychology, strategies, and new resources. Written by an RD who gets it.
             </p>
             <NewsletterForm />
           </div>
