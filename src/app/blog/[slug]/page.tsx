@@ -144,14 +144,12 @@ export default async function BlogPostPage({ params }: Props) {
                   width: 36,
                   height: 36,
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, #7c3aed, #ec4899)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "0.9rem",
+                  overflow: "hidden",
+                  border: "2px solid rgba(139, 92, 246, 0.3)",
+                  flexShrink: 0,
                 }}
               >
-                👨‍⚕️
+                <img src="/dan-chase-headshot.webp" alt="Dan Chase, RD" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
               <div>
                 <p style={{ color: "white", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.1rem" }}>
@@ -226,15 +224,12 @@ export default async function BlogPostPage({ params }: Props) {
                   width: 56,
                   height: 56,
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, #7c3aed, #ec4899)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.5rem",
+                  overflow: "hidden",
+                  border: "2px solid rgba(139, 92, 246, 0.3)",
                   flexShrink: 0,
                 }}
               >
-                👨‍⚕️
+                <img src="/dan-chase-headshot.webp" alt="Dan Chase, RD" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
               <div>
                 <p style={{ color: "white", fontWeight: 700, marginBottom: "0.25rem" }}>Dan Chase, RD</p>

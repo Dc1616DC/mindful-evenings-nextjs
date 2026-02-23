@@ -36,7 +36,9 @@ export default function AboutPage() {
         <div className="section-container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", alignItems: "start" }}>
             <div>
-              <div style={{ width: 250, height: 250, borderRadius: "50%", background: "linear-gradient(135deg, #1e1b4b, #4c1d95)", border: "3px solid rgba(139, 92, 246, 0.4)", margin: "0 auto 1.5rem", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "5rem" }}>👨‍⚕️</div>
+              <div style={{ width: 250, height: 250, borderRadius: "50%", border: "3px solid rgba(139, 92, 246, 0.4)", margin: "0 auto 1.5rem", overflow: "hidden" }}>
+                <img src="/dan-chase-headshot.webp" alt="Dan Chase, Registered Dietitian" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+              </div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", justifyContent: "center", marginBottom: "1rem" }}>
                 {["Registered Dietitian (RD)", "Intuitive Eating Certified", "ACT Trained"].map(c => (
                   <span key={c} className="category-badge">{c}</span>

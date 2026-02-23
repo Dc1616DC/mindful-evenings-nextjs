@@ -184,15 +184,12 @@ export default function HomePage() {
               width: 48,
               height: 48,
               borderRadius: "50%",
-              background: "linear-gradient(135deg, #7c3aed, #ec4899)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "1.25rem",
+              overflow: "hidden",
               flexShrink: 0,
+              border: "2px solid rgba(139, 92, 246, 0.4)",
             }}
           >
-            👨‍⚕️
+            <img src="/dan-chase-headshot.webp" alt="Dan Chase, RD" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
           </div>
           <p style={{ color: "#94a3b8", fontSize: "0.9rem" }}>
             Created by{" "}
@@ -367,23 +364,19 @@ export default function HomePage() {
               alignItems: "center",
             }}
           >
-            {/* Photo placeholder */}
+            {/* Dan's photo */}
             <div style={{ textAlign: "center" }}>
               <div
                 style={{
                   width: 220,
                   height: 220,
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, #1e1b4b, #4c1d95)",
                   border: "3px solid rgba(139, 92, 246, 0.4)",
                   margin: "0 auto",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "4rem",
+                  overflow: "hidden",
                 }}
               >
-                👨‍⚕️
+                <img src="/dan-chase-headshot.webp" alt="Dan Chase, Registered Dietitian" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
               <p style={{ color: "#8b5cf6", fontSize: "0.8rem", marginTop: "0.75rem", fontWeight: 600 }}>
                 Registered Dietitian
