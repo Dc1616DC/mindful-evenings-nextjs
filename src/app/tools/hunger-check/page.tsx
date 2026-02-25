@@ -142,7 +142,7 @@ export default function HungerCheckPage() {
           </div>
 
           {/* Interactive Tool */}
-          <div style={{ background: "rgba(139, 92, 246, 0.06)", border: "1px solid rgba(139, 92, 246, 0.2)", borderRadius: 20, padding: "2.5rem 2rem", textAlign: "center" }}>
+          <div style={{ background: "rgba(139, 92, 246, 0.06)", border: "1px solid rgba(139, 92, 246, 0.2)", borderRadius: 20, padding: "2.5rem 2rem", textAlign: "center", position: "relative", zIndex: 60 }}>
             {!showResult ? (
               <>
                 <p style={{ color: "#8b5cf6", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
@@ -169,6 +169,8 @@ export default function HungerCheckPage() {
                         cursor: "pointer",
                         transition: "all 0.2s",
                         textAlign: "left",
+                        position: "relative",
+                        zIndex: 70,
                       }}
                       onMouseOver={(e) => {
                         (e.target as HTMLButtonElement).style.background = "rgba(139, 92, 246, 0.2)";
@@ -198,10 +200,10 @@ export default function HungerCheckPage() {
                   </p>
                 </div>
                 <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                  <button onClick={reset} className="btn-secondary" style={{ cursor: "pointer" }}>
+                  <button onClick={reset} className="btn-secondary" style={{ cursor: "pointer", position: "relative", zIndex: 70 }}>
                     Try Again
                   </button>
-                  <a href="https://app.chase-wellness.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href="https://app.chase-wellness.com" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ position: "relative", zIndex: 70 }}>
                     Full Evening Check-In
                   </a>
                 </div>
