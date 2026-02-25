@@ -4,7 +4,7 @@ import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Evening Eating Resources & Tools | Mindful Evenings",
-  description: "Free resources for managing nighttime cravings — journal prompts, the HALT check-in, breathing exercises, and more. Tools, guides, and resources to support your journey.",
+  description: "Free resources for managing nighttime cravings — journal prompts, values-based check-ins, breathing exercises, and more. Tools, guides, and resources to support your journey.",
   alternates: { canonical: "https://evenings.chase-wellness.com/resources" },
 };
 
@@ -83,7 +83,7 @@ export default function ResourcesPage() {
           <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "white", marginBottom: "1.5rem" }}>Core Frameworks</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem", marginBottom: "3rem" }}>
             {[
-              { icon: "🛑", title: "The HALT Framework", desc: "Are you Hungry, Angry, Lonely, or Tired? HALT is a simple self-check to identify the emotional state beneath a craving.", link: "/learn/halt-framework" },
+              { icon: "💜", title: "Values-Based Check-In", desc: "Explore what you actually need: Rest, Connection, Accomplishment, Comfort, Play, or Peace. A deeper way to understand evening cravings.", link: "/check-in" },
               { icon: "🧠", title: "Intuitive Eating Basics", desc: "The 10 principles of Intuitive Eating, adapted for evening eating situations.", link: "/learn/what-is-emotional-eating" },
               { icon: "🌙", title: "The Evening Check-In", desc: "A structured 2-minute process for pausing with evening cravings and responding with intention.", link: "/check-in" },
               { icon: "📓", title: "Evening Journal Prompts", desc: "10 reflection questions to deepen self-awareness around evening eating patterns.", link: "/blog/evening-journal-prompts" },
