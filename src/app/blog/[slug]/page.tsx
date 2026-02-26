@@ -42,11 +42,31 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const allPosts = getAllPosts("blog");
-  const related = allPosts
-    .filter((p) => p.slug !== slug && p.category === post.category)
-    .slice(0, 3);
-  const fallbackRelated = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
-  const relatedPosts = related.length >= 2 ? related : fallbackRelated;
+
+  // Curated related articles by topic group
+  const RELATED_MAP: Record<string, string[]> = {
+    "night-eating-syndrome": ["cant-stop-eating-at-night-guide", "boredom-nighttime-eating", "sleep-and-late-night-snacking"],
+    "cant-stop-eating-at-night-guide": ["night-eating-syndrome", "boredom-nighttime-eating", "sleep-and-late-night-snacking"],
+    "glp1-evening-cravings": ["glp1-food-noise", "glp1-starving-at-night", "emotional-eating-after-work"],
+    "glp1-food-noise": ["glp1-evening-cravings", "glp1-starving-at-night", "stress-eating-cortisol"],
+    "glp1-starving-at-night": ["glp1-evening-cravings", "glp1-food-noise", "sleep-and-late-night-snacking"],
+    "emotional-eating-after-work": ["emotional-eating-or-real-hunger", "stress-eating-cortisol", "halt-checkin-tool"],
+    "emotional-eating-or-real-hunger": ["emotional-eating-after-work", "stress-eating-cortisol", "halt-checkin-tool"],
+    "stress-eating-cortisol": ["emotional-eating-after-work", "emotional-eating-or-real-hunger", "eating-more-stressful-days"],
+    "boredom-nighttime-eating": ["things-to-do-instead-of-snacking", "night-eating-syndrome", "cant-stop-eating-at-night-guide"],
+    "things-to-do-instead-of-snacking": ["boredom-nighttime-eating", "evening-journal-prompts", "halt-checkin-tool"],
+    "sleep-and-late-night-snacking": ["eating-more-stressful-days", "night-eating-syndrome", "cant-stop-eating-at-night-guide"],
+    "eating-more-stressful-days": ["sleep-and-late-night-snacking", "stress-eating-cortisol", "emotional-eating-after-work"],
+    "evening-journal-prompts": ["halt-checkin-tool", "things-to-do-instead-of-snacking", "emotional-eating-after-work"],
+    "halt-checkin-tool": ["evening-journal-prompts", "things-to-do-instead-of-snacking", "emotional-eating-or-real-hunger"],
+  };
+
+  const curatedSlugs = RELATED_MAP[slug] || [];
+  const postBySlug = Object.fromEntries(allPosts.map((p) => [p.slug, p]));
+  const curatedPosts = curatedSlugs.map((s) => postBySlug[s]).filter(Boolean);
+  const relatedPosts = curatedPosts.length >= 2
+    ? curatedPosts
+    : allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -253,7 +273,7 @@ export default async function BlogPostPage({ params }: Props) {
         <section style={{ padding: "3rem 1.5rem", background: "#0f0a2e" }}>
           <div className="section-container">
             <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "white", marginBottom: "1.75rem", textAlign: "center" }}>
-              Continue Reading
+              Keep Reading
             </h2>
             <div
               style={{

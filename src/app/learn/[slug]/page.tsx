@@ -151,6 +151,16 @@ export default async function LearnArticlePage({ params }: Props) {
                 <p style={{ color: "#64748b", fontSize: "0.75rem" }}>Registered Dietitian</p>
               </div>
             </div>
+            {article.date && (
+              <span style={{ color: "#475569", fontSize: "0.82rem" }}>
+                📅{" "}
+                {new Date(article.date).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </span>
+            )}
             <span style={{ color: "#475569", fontSize: "0.82rem" }}>⏱ {article.readTime}</span>
           </div>
         </div>
